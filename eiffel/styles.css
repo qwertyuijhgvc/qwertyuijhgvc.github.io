@@ -45,7 +45,7 @@ border: double 10px white;
 
 }
 
-#list {
+.list {
     color:#333300;}
 
 
@@ -53,7 +53,7 @@ border: double 10px white;
 
     {
     
-    float: right;
+    float:right ;
     
     width: 350px;
     
