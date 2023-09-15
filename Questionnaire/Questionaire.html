@@ -1,0 +1,39 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head><title> Questionaire </title> </head>
+    <body>
+    <form id = "questions">
+        <h2>How Long is a Marathon?</h2>
+        <select id = "run">
+            <option value = "wrong">Please Choose an Option</option>
+            <option value = "wrong">40.4km</option>
+            <option value = "wrong">35.9km</option>
+            <option value = "wrong">26.2km</option>
+            <option value = "right">42.2km</option>
+        </select>
+
+
+
+
+    
+
+
+
+
+
+
+            
+    </form>
+    </body>
+</html>
+<script>
+Score = 0
+    var x = document.forms["questions"]["run"].value;
+        if (x = "right"){
+            Score = Score + 1}
+       
+
+        
+
+ document.write("Your score is " + Score)
+
+</script>

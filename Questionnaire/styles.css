@@ -1,0 +1,13 @@
+body 
+{ background-color: rgb(161, 161, 211);
+font-family:'Times New Roman', Times, serif;
+text-align: left;}
+#right-column
+
+    {
+    
+    float: right ;}
+
+#img {
+    border: dashed 3px black
+}
