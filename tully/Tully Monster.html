@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
-	<title></title>
+	<title>TullyMonster</title>
 	<style>
 		body {font-family: arial, "sans-serif";}
 	</style>
@@ -16,20 +16,20 @@
 <img src="TullyMonster.png">
 </div>
 <button type="button" onclick=showHide()> Show / Hide Image </button>
-<form name="question">
 <p id="box">Question - How long was the Tully Monster?</p> 
 <button type="button" onclick="document.getElementById('box').innerHTML = 'The Tully Monster grew to 35cm long.'">Show answer</button>
-</form>
 <p id="box2">Click below to find out where it lived.</p>
 <button type="button" onclick="document.getElementById('box2').innerHTML = 'It lived in the tropical estuaries of Illinois, USA'"> Show habitat </button>
-<p id = "box" >
+<form name="question">
+<p>
 	Answer: <input id = "box" type="text" name="answer">
 </p>
-<button id = box type="button" onclick="validate()">Show answer</button>
+<button id = "box" type="button" onclick= "validate()" >Show answer</button>
+</form>
 <script> 
-	function validate() {
+ function validate() {
 
-	var x = document.forms["question"]["answer"].value;
+  var x = document.forms["question"]["answer"].value;
 	
 	if (x == "") {
 	
@@ -41,7 +41,7 @@
 		alert("Correct!");
 		
 		}
-	} 
+    } 
 	
 	function showHide() {
 
