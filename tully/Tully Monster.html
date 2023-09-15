@@ -25,15 +25,15 @@
 <p id = "box" >
 	Answer: <input id = "box" type="text" name="answer">
 </p>
-<button type="button" onclick="validate()">Show answer</button>
+<button id = box type="button" onclick="validate()">Show answer</button>
 <script> 
 	function validate() {
 
-	var x = document.getElementById("box").value;
+	var x = document.forms["question"]["answer"].value;
 	
 	if (x == "") {
 	
-	document.getElementById("box").style.borderColor = "red";
+		document.getElementById("box").style.borderColor = "red";
 	
 	}
 	else if (x == "35cm"){
