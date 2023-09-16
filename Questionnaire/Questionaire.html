@@ -1,39 +1,99 @@
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-    <head><title> Questionaire </title> </head>
-    <body>
-    <form id = "questions">
-        <h2>How Long is a Marathon?</h2>
-        <select id = "run">
-            <option value = "wrong">Please Choose an Option</option>
+    <head><title> Questionaire </title> 
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body style.color = "red">
+    <form name = "questions">
+        <h1>Please Complete This Questionnaire</h1>
+        <h3>How Long is a Marathon?</h3>
+        <img id = img src = marathon.jpg width = 200 height = 100>
+        <div>
+        <select name = "run">
+            <option value = "wrong" >Please Choose an Option</option>
             <option value = "wrong">40.4km</option>
             <option value = "wrong">35.9km</option>
             <option value = "wrong">26.2km</option>
-            <option value = "right">42.2km</option>
+            <option value = "right" >42.2km</option>
         </select>
-
-
-
-
-    
-
-
-
-
-
-
-            
+        </div>
+        <div>
+        <h3>What Year Was Youtube Created?</h3>
+        <img id = img src = youtube.jpg width = 200 height = 100>
+        <div></div>
+        <input type = radio id = "2007" name = "year">
+        <label for = "2007"> 2007</label>
+        <input type = radio id = "2005" name = "year" value = "right">
+        <label for = "2005"> 2005</label>
+        <input type = radio id = "2005" name = "year">
+        <label for = "2009"> 2009</label>
+        <input type = radio id = "2005" name = "year">
+        <label for = "2004"> 2004</label>
+        </div>
+        <div>
+        <h3>What Year Did WWII End?</h3>
+        <img id = img src = WWII.jpg width = 200 height = 100>
+        <p>
+            Answer: <input id = "box" type="text" name= "answer">
+        </p>
+        </div>
+        <h3>What is the Best Selling Nintendo Console?</h3>
+        <img id = img src = nintendo.png width = 200 height = 100>
+        <div>
+            <select name = "nintendo">
+                <option value = "wrong" >Please Choose an Option</option>
+                <option value = "wrong">Nintendo Wii</option>
+                <option value = "wrong">Nintendo Switch</option>
+                <option value = "right">Nintendo DS</option>
+                <option value = "wrong" >Gamecube</option>
+            </select>
+        </div>
+        <div>
+            <h3>What is <u> Currently</u> the  Highest Grossing Movie of 2023?</h3>
+            <img id = img src = movie.jpg width = 200 height = 100>
+            <div></div>
+            <input type = radio name = "movie">
+            <label>Mario Movie</label>
+            <input type = radio name = "movie">
+            <label>Oppenheimer</label>
+            <input type = radio name = "movie">
+            <label>GotG3</label>
+            <input type = radio  name = "movie" value = "right">
+            <label>Barbie Movie</label>
+        </div>
+        &nbsp
+        <div style="color:rgb(22, 26, 255)">Answers for checking: 42.2km, 2005, 1945, Nintendo DS, Barbie Movie</div>
+        <button id="box" type = "button" onclick = validate()>Check Score</button>      
     </form>
     </body>
 </html>
 <script>
-Score = 0
-    var x = document.forms["questions"]["run"].value;
-        if (x = "right"){
-            Score = Score + 1}
-       
+    var Score = 0
+    function validate() {
+        Score = 0
+        var x = document.forms["questions"]["run"].value;
+          
+          if (x == "right") {
+            Score = Score + 1;}
 
+        var y = document.forms["questions"]["year"].value;
+          if (y == "right") {
+            Score = Score + 1;}
+
+        var j = document.forms["questions"]["answer"].value;
+          if (j == "1945") {
+                Score = Score + 1;} 
         
-
- document.write("Your score is " + Score)
-
+        var i = document.forms["questions"]["nintendo"].value;
+            if (i == "right") {
+                Score = Score + 1;}
+        
+        var k = document.forms["questions"]["movie"].value;
+            if (k == "right") {
+                Score = Score + 1;}
+        
+        if (Score == 5) {
+            alert("Congradulations You Got All The Answers Correct")
+        }
+        alert("Your score is " + Score)     
+    }
 </script>
