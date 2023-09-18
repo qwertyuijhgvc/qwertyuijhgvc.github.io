@@ -63,12 +63,15 @@
         &nbsp
         <div style="color:rgb(22, 26, 255)">Answers for checking: 42.2km, 2005, 1945, Nintendo DS, Barbie Movie</div>
         <button id="box" type = "button" onclick = validate()>Check Score</button>      
+        <div id = "check"></div>
     </form>
     </body>
 </html>
 <script>
     var Score = 0
     function validate() {
+        var d = document.getElementById("check")
+        d.innerText = ""
         Score = 0
         Wrong = " You got"
         var x = document.forms["questions"]["run"].value;
@@ -98,9 +101,9 @@
         else {Wrong += " Question 5 Wrong"}
     
         if (Score == 5) {
-            alert("Congradulations You Got All The Answers Correct")
+            d.innerText += ("Congradulations You Got All The Answers Correct ")
             Wrong = ""
         }
-        alert("Your score is " + Score + Wrong)     
+            d.innerText += " Your score is " + Score + Wrong;
     }
 </script>
