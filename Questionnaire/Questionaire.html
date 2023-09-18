@@ -70,30 +70,37 @@
     var Score = 0
     function validate() {
         Score = 0
+        Wrong = " You got"
         var x = document.forms["questions"]["run"].value;
           
           if (x == "right") {
             Score = Score + 1;}
+          else {Wrong += " Question 1 Wrong"}
 
         var y = document.forms["questions"]["year"].value;
           if (y == "right") {
             Score = Score + 1;}
+          else {Wrong += " Question 2 Wrong"}
 
         var j = document.forms["questions"]["answer"].value;
           if (j == "1945") {
                 Score = Score + 1;} 
+          else {Wrong += " Question 3 Wrong"}
         
         var i = document.forms["questions"]["nintendo"].value;
             if (i == "right") {
                 Score = Score + 1;}
+            else {Wrong += " Question 4 Wrong"}
         
         var k = document.forms["questions"]["movie"].value;
             if (k == "right") {
                 Score = Score + 1;}
-        
+        else {Wrong += " Question 5 Wrong"}
+    
         if (Score == 5) {
             alert("Congradulations You Got All The Answers Correct")
+            Wrong = ""
         }
-        alert("Your score is " + Score)     
+        alert("Your score is " + Score + Wrong)     
     }
 </script>
