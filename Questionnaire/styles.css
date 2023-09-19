@@ -1,7 +1,8 @@
 body 
 { background-color: rgb(161, 161, 211);
 font-family:'Times New Roman', Times, serif;
-text-align: left;}
+text-align: center;
+font-size: 30px;}
 #right-column
 
     {
@@ -9,5 +10,8 @@ text-align: left;}
     float: right ;}
 
 #img {
-    border: dashed 3px black
+    border: dashed 3px black;
+    width: 400;
+    height: 300;
+    
 }
