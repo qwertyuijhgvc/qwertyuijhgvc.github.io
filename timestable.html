@@ -1,0 +1,49 @@
+<!doctype html>
+    <html>
+        <head>
+        <title>Times table Calculator</title>
+        </head>
+        <form action = "" method = "post" onsubmit = "return timesTableGen()">
+            <body>
+            
+                <h1>Times Table Calculator</h1>
+                <p>Times Table to Create</p>
+                <input type = text id = "inp" value = "0">
+                <p>Rows required</p>
+                <input type = text id = "row" value = "0">
+                <br>
+                <button type = "submit">Generate</button>
+                <button type = "reset">Reset</button>
+            </body>
+        </form>
+
+        <div id = "output"></div>
+    </html>
+
+    <script>
+        function timesTableGen(){
+            var num = document.getElementById("inp").value;
+            var times = document.getElementById("row").value;
+            var table = ""
+            for (let i =1; i<=times; i++){
+                table = table + "<p>"+ i + " times " + num + " equals " + i*num + "</p>"}
+            document.getElementById("output").innerHTML = table
+            return false
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
